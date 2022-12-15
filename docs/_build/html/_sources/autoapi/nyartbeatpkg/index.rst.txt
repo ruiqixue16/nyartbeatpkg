@@ -1,0 +1,86 @@
+:py:mod:`nyartbeatpkg`
+======================
+
+.. py:module:: nyartbeatpkg
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nyartbeatpkg.request_url
+   nyartbeatpkg.transform
+   nyartbeatpkg.transform_clean
+   nyartbeatpkg.get_event_info
+   nyartbeatpkg.get_current_event_info
+
+
+
+.. py:function:: request_url(url)
+
+   This function serves to request API and follows the structure given by ArtBeat API doc
+
+   Parameter
+   ---------
+   url = xml input
+
+
+.. py:function:: transform(xml_list)
+
+   This function serves to transform a given list of xml API into a dataframe, without cleaning
+
+   Parameter
+   ---------
+   xml_list = a list of xml(s)
+
+
+.. py:function:: transform_clean(xml_list)
+
+   This function serves to transform a given list of xml API into a dataframe
+   and also clean the DataFrame in the following ways:
+       1. transform some scripting language into appropriate format
+       2. transform variables into appropriate types
+
+   Parameter
+   ---------
+   xml_list = a list of xml(s)
+
+
+
+.. py:function:: get_event_info(df, **kwargs)
+
+   This function serves to get the information of the events that meet the criteria,
+   and return a dataframe.
+
+   The function uses up to three case insensitve argument values to filter through
+   the dataframe, and all events that
+   match with any argument are included in the new dataset. Duplicates are dropped.
+
+   Parameter
+   ---------
+   df = a dataframe that follows the structure of the previous settings
+   **kwargs can take in three arguments:
+   Type, Name, and Media
+
+
+.. py:function:: get_current_event_info(df)
+
+   This function serves to get the information of all the current events as of
+   the day of the search and return a dataframe.
+
+   Since all permanent events' Date End is marked as 0000-00-00 in the XML,
+   this function first transform these permanent events' Date End to 2030-12-31
+   in an attempt to represent the permanent aspect. A date that is too far ahead
+   will trigger the out of bounds nanoesecond timestamp error, but the date can
+   be altered to reflect the course of time.
+
+   Parameter
+   ---------
+   df = a dataframe that follows the structure of the previous settings
+
+
