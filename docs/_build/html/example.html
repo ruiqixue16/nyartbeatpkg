@@ -78,9 +78,9 @@
 <p>To use <code class="docutils literal notranslate"><span class="pre">nyartbeatpkg</span></code> in a project:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import nyartbeatpkg
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nyartbeatpkg</span>
 
-print(nyartbeatpkg.__version__)
+<span class="nb">print</span><span class="p">(</span><span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -92,6 +92,43 @@ print(nyartbeatpkg.__version__)
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;nyartbeatpkg&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>To use <code class="docutils literal notranslate"><span class="pre">request_url</span></code> from nyartbeatpkg to make parse xml:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;http://www.nyartbeat.com/list/event_type_3D_furniture.en.xml&quot;</span><span class="p">]</span>
+<span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">request_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To use <code class="docutils literal notranslate"><span class="pre">transform</span></code>, and <code class="docutils literal notranslate"><span class="pre">transform_clean</span></code> from nyartbeatpkg in a project:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;http://www.nyartbeat.com/list/event_type_3D_furniture.en.xml&quot;</span><span class="p">]</span>
+<span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">transform_clean</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To use <code class="docutils literal notranslate"><span class="pre">get_event_info</span></code> from nyartbeatpkg to get the matching event information:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;http://www.nyartbeat.com/list/event_type_3D_furniture.en.xml&quot;</span><span class="p">]</span>
+<span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">get_event_info</span><span class="p">(</span><span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">transform_clean</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To use <code class="docutils literal notranslate"><span class="pre">get_current_event_info</span></code> from nyartbeatpkg to get the matching event information:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;http://www.nyartbeat.com/list/event_type_3D_furniture.en.xml&quot;</span><span class="p">]</span>
+<span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">get_current_event_info</span><span class="p">(</span><span class="n">nyartbeatpkg</span><span class="o">.</span><span class="n">transform_clean</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
