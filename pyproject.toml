@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nyartbeatpkg"
-version = "0.1.0"
+version = "0.1.1"
 description = "A package for NY ArtBeat API"
 authors = ["Ruiqi Xue"]
 license = "MIT"
@@ -13,13 +13,12 @@ requests = "^2.28.1"
 bs4 = "^0.0.1"
 regex = "^2022.10.31"
 datetime = "^4.7"
-pytest = "^7.2.0"
 lxml = "^4.9.2"
+pytest = "^7.2.0"
 
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
 myst-nb = "^0.17.1"
 sphinx-autoapi = "^2.0.0"
 sphinx-rtd-theme = "^1.1.1"
