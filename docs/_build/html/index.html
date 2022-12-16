@@ -75,6 +75,12 @@
   <section id="nyartbeatpkg">
 <h1>nyartbeatpkg<a class="headerlink" href="#nyartbeatpkg" title="Permalink to this heading"></a></h1>
 <p>A package for NY ArtBeat API</p>
+<section id="about-the-package">
+<h2>About the package<a class="headerlink" href="#about-the-package" title="Permalink to this heading"></a></h2>
+<p>New York City, dubbed “the art capital of U.S.”, has an incredible amount of art events available on any given day. Given the huge volume of shows and exhibitions, it is often hard for people to filter through this mass data to find the event that interests them the most. With the API provided by the New York Art Beat, a platform that provides a comprehensive list of art events and reviews, this package first incorporates the different event lists in a single dataset and then allows users to pinpoint their events of interest with a couple built-in search functions.</p>
+<p>The API is consists of four categories and 24 subcategories, each has its own API in XML format. The database contains information on Name, Venue, Description, Image, Karma, Price, DateStart, DateEnd, PermanentEvent, Distance, Datum, Latitude, and Longitude (Children) of each Event (Parent). Some have missing values. The dataframe created by the function in this
+project follows the same structure as the API’s.</p>
+</section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install nyartbeatpkg
@@ -83,9 +89,12 @@
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p>TODO</p></li>
-</ul>
+<ol class="arabic simple">
+<li><p>Query NY ArtBeat’s API in XML format with specified structure</p></li>
+<li><p>Retreive and create a dataframe concurred with the structure of the API</p></li>
+<li><p>Use various functions provided in the package to transform and clean dataframe, get event info, and a list of events that
+are available as of the day of the search</p></li>
+</ol>
 </section>
 <section id="contributing">
 <h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading"></a></h2>
