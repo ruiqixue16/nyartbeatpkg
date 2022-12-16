@@ -168,7 +168,7 @@ test = ["pytest"]
 
 [[package]]
 name = "datetime"
-version = "4.7"
+version = "4.8"
 description = "This package provides a DateTime data type, as known from Zope. Unless you need to communicate with Zope APIs, you're probably better off using Python's built-in datetime module."
 category = "main"
 optional = false
@@ -1369,8 +1369,8 @@ comm = [
     {file = "comm-0.1.2.tar.gz", hash = "sha256:3e2f5826578e683999b93716285b3b1f344f157bf75fa9ce0a797564e742f062"},
 ]
 datetime = [
-    {file = "DateTime-4.7-py2.py3-none-any.whl", hash = "sha256:b8d2d605cfb5fed0da86f9ad64d0973c6f84b21939d49265e135811b33ee8113"},
-    {file = "DateTime-4.7.tar.gz", hash = "sha256:7ff7c4a857f08b73db17a85fc54f102d065ad16e7db0133e699c5f1b37e41478"},
+    {file = "DateTime-4.8-py2.py3-none-any.whl", hash = "sha256:b7d173fbe15c10a53575f56d2570b6e956c0a95e4be03479517a00791b19917d"},
+    {file = "DateTime-4.8.tar.gz", hash = "sha256:0d3c040bc3407bd6c564daeb19b22e8ac8b745ca51409722dc81af8630b1fc7f"},
 ]
 debugpy = [
     {file = "debugpy-1.6.4-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:6ae238943482c78867ac707c09122688efb700372b617ffd364261e5e41f7a2f"},
